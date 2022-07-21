@@ -1,0 +1,36 @@
+/html/body/h2[2]              -> second node
+/html/body/h2                 -> all h2s
+/html/body/h2[@class='hi']    -> with class='hi'
+/descendant-or-self::node()/child::h4[attribute::class='sub-title']
+//li/parent::node()   -> el parent bta3t el node de
+//li/ancestor::node()  -> kol el parents bta3t el nodes de 
+//li/ancestor-or-self::node()  -> kol el parents bta3t el nodes de w el nodes nfsaha brdo (li included)
+//li/preceding::node()  -> kol el nodes m3ada el ancestors (html - body - ul) nodes
+
+law 3ayz ageb li el tania w el talta bs 
+//li[position() = 2 or position() = 3]
+law 3ayz a5r li bs 
+//li[position() = last()]
+law 3ayz el li el abl el akhera
+//li[position() = last() - 1]
+select all Li's with position higher than 1
+//li[position() > 1]
+
+contains() function (case sensitive)
+//*[contains(@class, 'title')]
+startswith() function
+//*[starts-with(text(), 'Mena' )]         -> text() searches in text content not attributes
+momkn a3ml kda brdo law 3ayz ageb ay 7aga el class bta3ha bybd2 b kelma mo3yna 
+//*[starts-with(@class, 'sub' )]
+
+
+good reads project commands
+//div[@class='quoteText']/
+//div[@class='quoteText']/text()
+//div[@class='quoteText']/text()[1]
+
+//span[@class='authorOrTitle']/text()
+or
+//div[@class='quoteText']/child::span/text()
+to select tags
+//div[@class='greyText smallText left']/child::a/text()

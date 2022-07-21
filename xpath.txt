@@ -34,3 +34,5 @@ or
 //div[@class='quoteText']/child::span/text()
 to select tags
 //div[@class='greyText smallText left']/child::a/text()
+
+to save data as csv or json scrapy crawl goodreads -o data.json

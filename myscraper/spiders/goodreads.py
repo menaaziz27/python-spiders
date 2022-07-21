@@ -16,10 +16,10 @@ class GoodReadsSpider(scrapy.Spider):
      # response
     def parse(self, response):
         for quote in response.selector.xpath("//div[@class='quote']"):
-            loader = ItemLoader(item=QuoteItem(), selector=quote, response=response)
-            loader.add_xpath("text", xpath=".//div[@class='quoteText'][1]/text()[1]")
-            loader.add_xpath("author", xpath=".//div[@class='quoteText']/child::span")
-            loader.add_xpath("tags", xpath=".//div[@class='greyText smallText left']/child::a")
+            loader = ItemLoader(item = QuoteItem(), selector = quote, response = response)
+            loader.add_xpath("text", xpath = ".//div[@class='quoteText'][1]/text()[1]")
+            loader.add_xpath("author", xpath = ".//div[@class='quoteText']/child::span")
+            loader.add_xpath("tags", xpath = ".//div[@class='greyText smallText left']/child::a")
             yield loader.load_item()
             # yield {
             #     'text': quote.xpath(".//div[@class='quoteText'][1]/text()[1]").extract_first(),
